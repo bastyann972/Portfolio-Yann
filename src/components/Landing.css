@@ -28,16 +28,16 @@
   font-size: 3rem;
 
   /* Couleur du texte, utilise une variable CSS définie dans votre thème */
-  color: var(--light-shades);
+  color: whitesmoke;
 
   /* Fond semi-transparent pour créer un effet d'arrière-plan légèrement obscurci */
   background-color: rgba(0, 0, 0, 0.2);
 
   /* Ajoute un espacement à l'intérieur de l'élément pour que le contenu soit éloigné des bords */
-  padding: var(--padding);
+  padding: 1rem;
 
   /* Ajoute des coins arrondis, la valeur est définie par une variable CSS pour la cohérence dans le design */
-  border-radius: var(--border-radius);
+  border-radius: 10px;
 
   /* Applique un effet de flou à l'arrière-plan pour créer un effet visuel de "verre dépoli" */
   backdrop-filter: blur(10px);
@@ -46,7 +46,7 @@
 @media screen and (max-width: 1024px) {
   .landing-type {
     font-size: 2.5rem; /* Réduire la taille de la police */
-    padding: calc(var(--padding) / 1.5); /* Ajuster le padding */
+    padding: calc(1rem / 1.5); /* Ajuster le padding */
   }
 }
 
@@ -68,7 +68,7 @@
 @media screen and (max-width: 480px) {
   .landing-type {
     font-size: 1.5rem; /* Petite taille de texte adaptée aux téléphones */
-    padding: calc(var(--padding) / 3); /* Réduire encore le padding */
+    padding: calc(1rem / 3); /* Réduire encore le padding */
     width: 90%; /* Limiter la largeur de l'élément pour éviter qu'il ne touche les bords de l'écran */
   }
 }

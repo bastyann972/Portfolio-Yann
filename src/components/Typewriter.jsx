@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Typewriter.css";
 
-function Typewriter({ data = [], TypeSpeed = 100, MsgDelay = 2000 }) {
+const Typewriter = ({ data = [], TypeSpeed = 100, MsgDelay = 2000 }) => {
   const [displayText, setDisplayText] = useState("");
   const CharacterPos = useRef(0);
   const MsgIndex = useRef(0);
@@ -13,7 +13,9 @@ function Typewriter({ data = [], TypeSpeed = 100, MsgDelay = 2000 }) {
 
     function StartTyping() {
       if (CharacterPos.current !== data[MsgIndex.current]?.length) {
-        MsgBuffer.current += data[MsgIndex.current]?.charAt(CharacterPos.current);
+        MsgBuffer.current += data[MsgIndex.current]?.charAt(
+          CharacterPos.current
+        );
         setDisplayText(MsgBuffer.current + "_");
         delay = TypeSpeed;
       } else {
@@ -38,6 +40,6 @@ function Typewriter({ data = [], TypeSpeed = 100, MsgDelay = 2000 }) {
   }, [data, TypeSpeed, MsgDelay]);
 
   return <div className="typing-text">{displayText}</div>;
-}
+};
 
 export default Typewriter;

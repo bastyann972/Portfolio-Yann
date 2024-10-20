@@ -1,6 +1,6 @@
-import React from 'react';
-import Typewriter from './Typewriter';
-import AnimatedBackground from './AnimatedBackground';
+import React from "react";
+import Typewriter from "./Typewriter";
+import AnimatedBackground from "./AnimatedBackground";
 import "./Landing.css";
 
 // Nouveau tableau de messages pour l'effet Typewriter
@@ -16,7 +16,7 @@ let msgArray = [
   " ",
 ];
 
-function Landing() {
+const Landing = React.memo(() => {
   return (
     <AnimatedBackground>
       <section
@@ -30,6 +30,6 @@ function Landing() {
       </section>
     </AnimatedBackground>
   );
-}
+});
 
 export default Landing;

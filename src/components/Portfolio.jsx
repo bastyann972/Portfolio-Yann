@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Modal from "./Modal";
+import Modal from "./Modal.jsx";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import projects from "../data/projects";
+import projects from "../data/projects.js";
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <FaChevronRight
       className={`${className} text-white hover:text-highlight transition-colors duration-300`}
-      style={{ ...style, display: "block", right: "-25px" }}
+      style={{ ...style, display: "block", right: "10px" }}
       onClick={onClick}
     />
   );
@@ -22,13 +23,13 @@ const PrevArrow = (props) => {
   return (
     <FaChevronLeft
       className={`${className} text-white hover:text-highlight transition-colors duration-300`}
-      style={{ ...style, display: "block", left: "-25px" }}
+      style={{ ...style, display: "block", left: "-5px" }}
       onClick={onClick}
     />
   );
 };
 
-const Portfolio = () => {
+const Portfolio = React.memo(() => {
   const [currentProject, setCurrentProject] = useState(null);
 
   const settings = {
@@ -66,13 +67,12 @@ const Portfolio = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white dark:text-highlight">
           Portfolio
         </h2>
-        <div className="relative" aria-label="Carrousel de projets">
-          <p className="sr-only">Utilisez les flèches gauche et droite pour naviguer entre les projets</p>
+        <div className="relative">
           <Slider {...settings} className="portfolio-slider">
             {projects.map((project) => (
               <div key={project.id} className="px-2 pb-8">
                 <div
-                  className="bg-white dark:bg-dark-shades rounded-lg overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full flex flex-col"
+                  className="portfolio-card bg-white dark:bg-dark-shades rounded-lg overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full flex flex-col min-h-[400px]"
                   onClick={() => setCurrentProject(project)}
                   onKeyPress={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
@@ -83,11 +83,14 @@ const Portfolio = () => {
                   role="button"
                   aria-label={`Voir les détails du projet ${project.title}`}
                 >
-                  <img
-                    src={project.image}
-                    alt={`Aperçu du projet ${project.title}`}
-                    className="w-full h-48 object-cover"
-                  />
+                  {/* Taille uniforme pour toutes les images */}
+                  <div className="relative w-full h-[250px] md:h-[300px] lg:h-[350px]">
+                    <img
+                      src={project.image}
+                      alt={`Aperçu du projet ${project.title}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="p-4 flex flex-col flex-grow">
                     <h3 className="text-lg md:text-xl font-semibold mb-2 text-gray-800 dark:text-light-shades">
                       {project.title}
@@ -113,6 +116,6 @@ const Portfolio = () => {
       )}
     </section>
   );
-};
+});
 
 export default Portfolio;

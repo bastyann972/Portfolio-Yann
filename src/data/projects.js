@@ -1,26 +1,24 @@
 const projects = [
   {
     id: 1,
-    title: "Projet 1",
-    description: "Description du projet 1",
-    image: "https://via.placeholder.com/300x200",
-    url: "https://example.com/projet1"
+    title: "Okemon",
+    description: "App qui permet de lister les cartes Pokémon avec leur prix",
+    image: "/img/pg1.webp",
+    url: "https://github.com/bastyann972/okemon",
   },
   {
     id: 2,
-    title: "Projet 2",
-    description: "Description du projet 2",
-    image: "https://via.placeholder.com/300x200",
-    url: "https://example.com/projet2"
+    title: "Au chouette maraicher",
+    description: "Site dynamique pour présenter les fruits et légumes",
+    image: "/img/pg3.webp",
+    url: "https://github.com/bastyann972/Atelier-Omarraicher",
   },
   {
     id: 3,
-    title: "Projet 3",
-    description: "Description du projet 3",
-    image: "https://via.placeholder.com/300x200",
-    url: "https://example.com/projet3"
+    title: "Tripodvisor",
+    description: "Site web d'une agence de voyage ",
+    image: "/img/pg2.webp",
+    url: "https://github.com/bastyann972/Atelier-Tripodvisor",
   },
-  // Ajoutez d'autres projets ici
 ];
-
 export default projects;

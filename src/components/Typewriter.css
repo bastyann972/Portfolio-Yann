@@ -1,11 +1,11 @@
 .typing-text {
   border: none;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   overflow: auto;
   outline: none;
   resize: none;
   background: transparent;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--light-shades, #ffffff);
 }
