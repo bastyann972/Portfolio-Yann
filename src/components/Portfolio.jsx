@@ -60,7 +60,7 @@ const Portfolio = React.memo(() => {
 
   return (
     <section
-      id="projet"
+      id="portfolio"
       className="py-16 bg-main-brand dark:bg-dark-shades transition-colors duration-300"
     >
       <div className="container mx-auto px-4">

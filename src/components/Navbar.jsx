@@ -57,6 +57,12 @@ const Navbar = React.memo(() => {
             Technologies
           </a>
           <a
+            href="#portfolio"
+            className="hover:text-highlight transition-colors duration-300"
+          >
+            Portfolio
+          </a>
+          <a
             href="#contact"
             className="hover:text-highlight transition-colors duration-300"
           >
@@ -101,6 +107,12 @@ const Navbar = React.memo(() => {
           className="hover:text-highlight transition-colors duration-300"
         >
           Technologies
+        </a>
+        <a
+          href="#portfolio"
+          className="hover:text-highlight transition-colors duration-300"
+        >
+          Portfolio
         </a>
         <a
           href="#contact"
