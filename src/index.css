@@ -1,0 +1,135 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --light-shades: #f3f3f4;
+  --padding: 20px;
+  --border-radius: 10px;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.odd-row {
+  @apply relative -top-[85%] -left-[5%] w-full py-[10px] -rotate-[30deg];
+}
+
+.odd-row > div {
+  animation: animate 80s linear infinite;
+  animation-delay: -80s;
+}
+
+.odd-row > div:nth-child(2) {
+  animation: animate2 80s linear infinite;
+  animation-delay: -40s;
+}
+
+.even-row {
+  @apply relative -top-[85%] -left-[5%] w-full py-[10px] -rotate-[30deg];
+}
+
+.even-row > div {
+  animation: animate3 80s linear infinite;
+  animation-delay: -80s;
+}
+
+.even-row > div:nth-child(2) {
+  animation: animate4 80s linear infinite;
+  animation-delay: -40s;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(
+    0 0 2em theme("colors.teal.500")
+  ); /* Utilisation de la couleur teal claire */
+}
+.logo.react:hover {
+  filter: drop-shadow(
+    0 0 2em theme("colors.highlight")
+  ); /* Utilisation de la couleur highlight */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .odd-row,
+  .even-row {
+    @apply -top-[50%] -rotate-[20deg];
+  }
+
+  .odd-row svg,
+  .even-row svg {
+    @apply w-[120px] h-[120px];
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .odd-row,
+  .even-row {
+    @apply -top-[40%] -left-[2%] -rotate-[15deg];
+  }
+
+  .odd-row svg,
+  .even-row svg {
+    @apply w-[100px] h-[100px];
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .odd-row,
+  .even-row {
+    @apply -top-[30%] left-0 -rotate-[10deg];
+  }
+
+  .odd-row svg,
+  .even-row svg {
+    @apply w-[80px] h-[80px];
+  }
+}
+
