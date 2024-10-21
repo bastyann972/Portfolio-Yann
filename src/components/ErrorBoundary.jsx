@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -7,19 +7,23 @@ class ErrorBoundary extends React.Component {
   }
 
   static getDerivedStateFromError(error) {
+    // Mettre à jour l'état pour afficher l'UI de secours
     return { hasError: true };
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Enregistrement d'une erreur dans la console
+    console.error("ErrorBoundary caught an error:", error, errorInfo);
+    // Comme il n'y a pas de back-end, on se contente d'un log dans la console.
   }
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong. Please try again later.</h1>;
+      // Affichage d'un message d'erreur générique
+      return <h1>Oops! Something went wrong. Please refresh the page.</h1>;
     }
 
-    return this.props.children;
+    return this.props.children; // Rendu des enfants si tout va bien
   }
 }
 

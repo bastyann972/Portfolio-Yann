@@ -9,7 +9,7 @@ const About = React.memo(() => {
       {/* L'image centrée avec une taille réduite sur grands écrans */}
       <div className="flex justify-center items-center">
         <img
-          src="/img/moi.webp"
+          src="/Portfolio-Yann/img/moi.webp"
           alt="Photo de Yann, développeur web back-end"
           className="w-48 h-48 md:w-64 md:h-64 rounded-full drop-shadow-glow object-cover mb-8 md:mb-0" // Maintient l'aspect ratio
         />
