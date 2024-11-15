@@ -30,7 +30,7 @@ const About = React.memo(() => {
         </h2>
         <p className="text-lg leading-relaxed text-light-shades dark:text-light-shades mb-6">
           Passionné par la technologie et animé par une grande curiosité, je me
-          spécialise dans le développement web back-end. Actuellement en
+          spécialise dans le développement web front-end. Actuellement en
           formation à l'École O'clock, j'ai acquis et mis en pratique diverses
           technologies. Je suis également reconnu pour ma rapidité d'analyse,
           mon excellent esprit d'équipe et ma volonté continue d'apprendre de

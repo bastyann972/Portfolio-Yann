@@ -37,7 +37,7 @@ const Contact = React.memo(() => {
             <FaEnvelope />
           </a>
           <a
-            href="tel:+596696657729"
+            href="tel:+33 6 67 52 18 31"
             aria-label="Appeler Yann Bastin via smartphone"
             className="text-2xl md:text-3xl hover:text-highlight dark:hover:text-gray-100 transition-colors duration-300 mb-2 md:mb-0"
           >
