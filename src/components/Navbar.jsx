@@ -69,7 +69,7 @@ const Navbar = React.memo(() => {
             Contact
           </a>
           <a
-            href="/Portfolio-Yann/CV-front-end.pdf"
+            href="/Portfolio-Yann/CV-dev.pdf"
             target="_blank"
             className="flex items-center bg-white text-main-brand px-4 py-2 rounded hover:bg-hover-shades transition-colors duration-300"
           >
@@ -121,7 +121,7 @@ const Navbar = React.memo(() => {
           Contact
         </a>
         <a
-          href="/Portfolio-Yann/CV-front-end.pdf"
+          href="/Portfolio-Yann/CV-dev.pdf"
           target="_blank"
           className="flex items-center bg-white text-main-brand px-4 py-2 rounded hover:bg-hover-shades transition-colors duration-300"
         >

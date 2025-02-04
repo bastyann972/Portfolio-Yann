@@ -20,6 +20,13 @@ const projects = [
     image: "/Portfolio-Yann/img/pg2.webp",
     url: "https://github.com/bastyann972/Atelier-Tripodvisor",
   },
+  {
+    id: 4,
+    title: "Greenroots",
+    description: "Site web d'e-commerce réalisé pendant le projet Apothéose",
+    image: "/Portfolio-Yann/img/pg4.webp",
+    url: "https://github.com/bastyann972/GreenRoots",
+  },
 ];
 
 export default projects; // Ceci fait un export par défaut
